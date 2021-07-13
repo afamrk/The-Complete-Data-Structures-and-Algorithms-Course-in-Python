@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style type="text/css">
+      H1{
+    text-align: center;
+}
+ input[type=text],input[type=email] , textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 6px; 
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+   
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
+  }
+  .sub{
+      background-color: rgb(161, 68, 173);
+  }
+  .cancel{
+    background-color: #139c1f;
+  }
+ 
+  .sub:hover  {
+    background-color: #751581;
+  }
+.cancel:hover  {
+    background-color: #18803b;
+  }
+
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+  } 
+  @media screen and (max-width: 792px)
+  {
+    .container {
+        margin-left: 170px;
+        margin-right: 170px;
+  }
+}
+@media screen and (max-width:660px)
+{
+  .container {
+      margin-left: 10px;
+      margin-right: 10px;
+}
+}
+    </style>
+    <H1>Contact Us</H1>
+    <div class="container">
+        
+        <form method="POST">
+          <label for="fname">Full Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          <label for="contmail">Contact Email</label>
+          <input type="email" id="contmail" name="contactmail" placeholder="Your email..">
+        
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input class="sub" type="submit" value="Submit">
+          <input class="cancel" type="submit" value="cancel">
+      
+        </form>
+      </div> 
+{% endblock %}
